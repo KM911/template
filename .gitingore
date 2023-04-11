@@ -1,0 +1,11 @@
+# idea
+.idea
+.vscode
+
+# bin 
+*.exe
+
+
+test
+
+

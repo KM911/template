@@ -1,0 +1,20 @@
+# idea
+.idea
+.vscode
+
+# bin 
+*.exe
+.class
+
+#image
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+
+test
+
+
+
+
