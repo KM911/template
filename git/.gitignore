@@ -13,6 +13,9 @@
 *.gif
 *.webp
 
+out
+target
+
 test
 
 

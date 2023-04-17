@@ -1,0 +1,34 @@
+{
+  "shortcut": {
+    "goland": [
+      "g",
+      "go"
+    ],
+    "vim": [
+      "v",
+      "vi"
+    ],
+    "vscode": [
+      "c",
+      "co",
+      "cod",
+      "code"
+    ]
+  },
+  "shortcuttest": {
+    "chrome": [
+      "chrome",
+      "c",
+      "google"
+    ],
+    "pycharm": [
+      "pycharm",
+      "p"
+    ],
+    "vscode": [
+      "vscode",
+      "vsc"
+    ]
+  },
+  "vscodpath": "C:\\Program Files (x86)\\Microsoft VS Code\\Code.exe"
+}
