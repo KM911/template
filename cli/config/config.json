@@ -1,0 +1,25 @@
+{
+  "shortcut": {
+    "baiduyun": ["yun","baidu","bd"],
+    "bitcomet": ["bt"],
+    "carnac": [],
+    "chrome": ["g","google"],
+    "clash": ["cl"],
+    "code": [],
+    "contextmenumanager": ["cm","context","cmm"],
+    "controller": ["con"],
+    "cygwin": [],
+    "everything": ["eve","ev"],
+    "github": ["git"],
+    "goland": ["go"],
+    "idea": ["idea"],
+    "pigcha": ["pig"],
+    "steam": ["st"],
+    "tim": [],
+    "tuba": [],
+    "typora": ["md"],
+    "wechat": ["chat","we"],
+    "d": [],
+    "c": []
+  }
+}
