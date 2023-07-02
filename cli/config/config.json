@@ -1,25 +1,69 @@
 {
   "shortcut": {
-    "baiduyun": ["yun","baidu","bd"],
-    "bitcomet": ["bt"],
+    "apifox": [],
+    "baiduyun": [
+      "yun",
+      "baidu",
+      "bd"
+    ],
+    "bcut": [],
+    "bitcomet": [
+      "bt"
+    ],
+    "c": [],
     "carnac": [],
-    "chrome": ["g","google"],
-    "clash": ["cl"],
+    "chatgpt": [],
+    "chrome": [
+      "g",
+      "google"
+    ],
+    "clash": [
+      "cl"
+    ],
     "code": [],
-    "contextmenumanager": ["cm","context","cmm"],
-    "controller": ["con"],
+    "contextmenumanager": [
+      "cm",
+      "context",
+      "cmm"
+    ],
+    "controller": [
+      "con"
+    ],
     "cygwin": [],
-    "everything": ["eve","ev"],
-    "github": ["git"],
-    "goland": ["go"],
-    "idea": ["idea"],
-    "pigcha": ["pig"],
-    "steam": ["st"],
+    "d": [],
+    "everything": [
+      "eve",
+      "ev"
+    ],
+    "factor": [],
+    "feishu": [],
+    "github": [
+      "git"
+    ],
+    "goland": [
+      "go"
+    ],
+    "idea": [
+      ""
+    ],
+    "pigcha": [
+      "pig"
+    ],
+    "qbittorrent": [],
+    "qq": [],
+    "resp": [],
+    "steam": [
+      "st"
+    ],
     "tim": [],
     "tuba": [],
-    "typora": ["md"],
-    "wechat": ["chat","we"],
-    "d": [],
-    "c": []
+    "typora": [
+      "md"
+    ],
+    "wallpaper": [],
+    "wechat": [
+      "chat",
+      "we"
+    ]
   }
 }

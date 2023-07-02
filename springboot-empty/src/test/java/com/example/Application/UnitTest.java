@@ -22,5 +22,6 @@ class UnitTest {
   public void Index() {
     String result = myClient.helloForest();
     System.out.println(result);
+
   }
 }

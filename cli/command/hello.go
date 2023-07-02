@@ -23,6 +23,5 @@ func HelloAction(c *cli.Context) error {
 	for _, value := range c.Args().Slice() {
 		println(value)
 	}
-
 	return nil
 }
