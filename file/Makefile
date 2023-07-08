@@ -14,13 +14,13 @@ build:
 
 release:
 	go build -ldflags "-s -w" -o $(Application)
-
-cross:
+linux:
 	set GOOS=linux
-	set GOARCH=amd64
 	go build -ldflags "-s -w"
-	set GOOS=windows
-	go build -ldflags "-s -w"
+
+
+
+cross:linux windows
 
 #学会获取参数才是真的
 cpu:

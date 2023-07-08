@@ -24,7 +24,6 @@ func LoadConfig() {
 CheckEnv checks if the environment is ready for the cli to run
 if not, it will try to fix it
 */
-
 func SetGlobal() {
 	PWD = oslib.ExecutePath()
 	ConfigFile = filepath.Join(PWD, "config", "config.json")

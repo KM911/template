@@ -5,9 +5,21 @@ import (
 	"github.com/spf13/viper"
 	"path"
 	"path/filepath"
+	"strings"
 	"testing"
 )
 
+func DelShortcutKey(key string) {
+	newvalue := viper.GetStringMapStringSlice("shortcut")
+	for i, v := range newvalue {
+		if v == nil {
+			newvalue[i] = []string{}
+		}
+	}
+	delete(newvalue, key)
+	viper.Set("shortcut", newvalue)
+	viper.WriteConfig()
+}
 func Test_ShortcutExist(t *testing.T) {
 	viper.SetConfigFile(filepath.Join(path.Dir(oslib.CmdPath()), "config", "config.json"))
 	viper.ReadInConfig()
@@ -31,19 +43,18 @@ func Test_ShortcutNotExist(t *testing.T) {
 	viper.ReadInConfig()
 	shortcutList := oslib.Dir(filepath.Join(path.Dir(oslib.CmdPath()), "config", "shortcut"))
 	for i := range shortcutList {
-		shortcutList[i] = oslib.FileName(shortcutList[i])
+		shortcutList[i] = strings.ToLower(oslib.FileName(shortcutList[i]))
 	}
 	for key, _ := range viper.GetStringMapStringSlice("shortcut") {
 		if !oslib.InArray(key, shortcutList) {
 			t.Error("shortcut " + key + " not exist")
-			// remove the key
-			viper.Set("shortcut."+key, nil)
+			DelShortcutKey(key)
 		}
 	}
 
-	//viper.WriteConfig()
 }
 
+// 检查快捷键是否重复
 func Test_shortcut_is_repeate(t *testing.T) {
 	viper.SetConfigFile(filepath.Join(path.Dir(oslib.CmdPath()), "config", "config.json"))
 	viper.ReadInConfig()
@@ -51,13 +62,15 @@ func Test_shortcut_is_repeate(t *testing.T) {
 	for key, _ := range viper.GetStringMapStringSlice("shortcut") {
 		for _, value := range viper.GetStringMapStringSlice("shortcut") {
 			for _, v := range value {
+				// key == v 说明快捷键重复
 				if key == v {
 					t.Error("shortcut " + key + " is repeate")
-					panic("shortcut " + key + " is repeate")
-					//newvalue := append(value[:index], value[index+1:]...)
-					//viper.Set("shortcut."+key, newvalue)
+					// only remove the v
+					//newvalue := value
+
 					break
 				}
+
 			}
 		}
 	}

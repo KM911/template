@@ -1,18 +1,15 @@
 {
   "shortcut": {
-    "apifox": [],
+    "apifox": ["api"],
     "baiduyun": [
       "yun",
       "baidu",
       "bd"
     ],
     "bcut": [],
-    "bitcomet": [
-      "bt"
-    ],
     "c": [],
     "carnac": [],
-    "chatgpt": [],
+    "chatgpt": ["chat"],
     "chrome": [
       "g",
       "google"
@@ -29,7 +26,6 @@
     "controller": [
       "con"
     ],
-    "cygwin": [],
     "d": [],
     "everything": [
       "eve",
@@ -37,6 +33,7 @@
     ],
     "factor": [],
     "feishu": [],
+    "forest": [],
     "github": [
       "git"
     ],
@@ -46,23 +43,29 @@
     "idea": [
       ""
     ],
+    "moon": [],
+    "navicat": ["cat"],
     "pigcha": [
       "pig"
     ],
-    "qbittorrent": [],
+    "qbittorrent": [
+      "bt",
+      "torrent"
+    ],
     "qq": [],
-    "resp": [],
+    "resp": ["redis","red","rd"],
     "steam": [
       "st"
     ],
+    "tg": [],
     "tim": [],
     "tuba": [],
     "typora": [
       "md"
     ],
-    "wallpaper": [],
+    "wallpaper": ["wp"],
     "wechat": [
-      "chat",
+      "wx",
       "we"
     ]
   }
