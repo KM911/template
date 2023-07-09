@@ -14,6 +14,14 @@ type Client struct {
 	body    string
 }
 
+func (c *Client) SetHeaders(headers map[string]string) {
+	c.headers = headers
+}
+
+func (c *Client) SetBody(body string) {
+	c.body = body
+}
+
 func (c *Client) Get(url string) string {
 	c.method = "GET"
 	c.url = url

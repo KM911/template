@@ -34,11 +34,11 @@ func Gzip(data string) []byte {
 func main() {
 	defer adt.TimerStart().End()
 	headers := map[string]string{
-		"Content-Type":     "application/json",
-		"Accept":           "*/*",
-		"Content-Encoding": "gzip",
+		"Content-Type":    "application/json",
+		"Accept":          "*/*",
+		"Accept-Encoding": "gzip, deflate, br",
 	}
 	client := request.NewPostClient("http://192.168.0.102:3000/test",
-		headers, `{"name":"dzg","age":18}`)
+		headers, `{"list":["a",["a","b","c"]]}`)
 	fmt.Println("this res", client.Send())
 }
