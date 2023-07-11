@@ -1,6 +1,7 @@
 package main
 
+import "demo/model"
 
-func main(){
-	
+func main() {
+	model.InitDao()
 }

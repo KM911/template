@@ -10,10 +10,10 @@ test:
 	go test -v ./...
 
 build:
-	go build -o $(Name)
+	go build -ldflags "-s -w"
 
 release:
-	go build -ldflags "-s -w" -o $(Name)
+	go build -ldflags "-s -w" -o $(Name) && upx -9 $(Name)
 linux:
 	set  GOOS=linux
 	go build -ldflags "-s -w" -o $(Name)

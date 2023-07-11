@@ -14,7 +14,7 @@
 *.webp
 *.o
 *.bin
-
+project/
 out/
 target/
 /test/
