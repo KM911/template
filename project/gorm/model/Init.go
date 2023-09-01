@@ -7,7 +7,6 @@ import (
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
-	"path/filepath"
 )
 
 var (
@@ -27,7 +26,5 @@ func connectDatabase(filepath string) *gorm.DB {
 }
 
 func InitDao() {
-	hello := connectDatabase(filepath.Join("data", "choice.db"))
-	hello.AutoMigrate(&Hello{})
-	DS["choice"] = hello
+
 }

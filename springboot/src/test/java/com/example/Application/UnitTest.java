@@ -1,9 +1,10 @@
 package com.example.Application;
 
 
-import com.example.Application.Http.MyClient;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import javax.annotation.Resource;
@@ -13,14 +14,14 @@ import javax.annotation.Resource;
 // 也就是说，这个测试类是在SpringBoot的应用环境下运行的
 // 我们可以直接去使用SpringBoot的一些特性
 // 比如：自动注入
-@SpringBootTest
+//@SpringBootTest
 class UnitTest {
-  
-  @Resource
-  private MyClient myClient;
+
   @Test
-  public void Index() {
-    String result = myClient.helloForest();
-    System.out.println(result);
+  public void MainTest() throws JSONException {
+    JSONArray jsonArray = new JSONArray();
+    jsonArray.put(1);
+    jsonArray.put("22");
+    System.out.println(jsonArray);
   }
 }
