@@ -1,7 +1,8 @@
 package main
 
-import "github.com/KM911/demo/util"
+import "github.com/KM911/demo/format"
 
 func main() {
-	util.DrawBlock("test", []string{"test1", "test2", "test3"})
+	//format.BoxInfo("hello", " your should note")
+	format.BlockMessage("hello", []string{"hello", "world"})
 }

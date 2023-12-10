@@ -1,9 +1,8 @@
-package util
+package format
 
 import (
 	"fmt"
 	"time"
-	// "github.com/gookit/color"
 )
 
 type timer struct {
@@ -18,8 +17,7 @@ func TimerStart() *timer {
 
 func (t *timer) End() {
 	end := time.Now()
-	// fmt.Println("花费时间为：", color.Red.Render(end.Sub(t.start)))
-	fmt.Println("const time : ", end.Sub(t.start))
+	InfoMessage("Cost ", fmt.Sprint(end.Sub(t.start)))
 }
 
 func UnixTime() int64 {

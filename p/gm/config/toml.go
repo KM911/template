@@ -11,7 +11,7 @@ import (
 )
 
 const (
-	TomlFile = "ap.toml"
+	TomlFile = "config.toml"
 )
 
 // TODO : Create a struct to store the config
@@ -41,7 +41,6 @@ func LoadTomlConfiguration() {
 		fmt.Println("Configurations file created, please edit it and restart.")
 		os.Exit(0)
 	}
-
 	file, err := os.ReadFile(filepath.Join(util.CmdPath(), TomlFile))
 	if err != nil {
 		panic(err)

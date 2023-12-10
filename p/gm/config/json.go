@@ -2,13 +2,14 @@ package config
 
 import (
 	"encoding/json"
+	"github.com/KM911/demo/format"
 	"os"
 
 	"github.com/KM911/demo/util"
 )
 
 const (
-	JsonConfigurationFile = "ap.json"
+	JsonConfigurationFile = "config.json"
 )
 
 type JsonConfiguration struct {
@@ -52,12 +53,10 @@ var (
 )
 
 func TargetPath() string {
-	// temp文件夹下无法进行go build
 	return "T:\\sapkin"
 }
 
 func CreateDefaultJson() {
-	// TODO : Create a default json file
 	byte_json, err := json.Marshal(DefaultJsonConfiguration)
 	if err != nil {
 		panic(err)
@@ -70,10 +69,9 @@ func CreateDefaultJson() {
 }
 
 func LoadJsonConfiguration() {
-	// TODO : Load the json file
 	if !util.IsExist(JsonConfigurationFile) {
 		CreateDefaultJson()
-		println("Create a default json file")
+		format.InfoMessage("Create", "default json configuration file")
 		os.Exit(1)
 	}
 
