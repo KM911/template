@@ -1,8 +1,8 @@
-module main
+module demo
 
-go 1.21.0
+go 1.18
 
-require github.com/KM911/oslib v0.0.1
+require github.com/KM911/oslib v0.0.26
 
 require (
 	github.com/gookit/color v1.5.3 // indirect

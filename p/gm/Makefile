@@ -1,11 +1,25 @@
 pwd := $(shell pwd)
 project := $(notdir $(pwd))
 
+OS := $(shell go env GOOS)
+
+
 .PHONY:build linux win all clean upx install-lint lint callvis-install callvis proxy pprof 
 
 
+
+
 build:
-	@go build -ldflags "-s -w"  -tags debug
+	@if [ $(OS) = "windows" ]; then \
+		go build -ldflags "-s -w" -o $(project).exe; \
+		echo "build $(project).exe"; \
+		./$(project).exe; \
+	else \
+		go build -ldflags "-s -w" -o $(project); \
+		echo "build $(project)"; \
+		./$(project); \
+	fi
+
 
 release:
 	@go build -ldflags "-s -w" -tags release
