@@ -1,10 +1,15 @@
-# idea
+# ide
 .idea
 .vscode
 
-# bin 
+
+# object files
+*.bin
 *.exe
-.class
+*.class
+*.o
+*.out
+*.so
 
 #image
 *.png
@@ -12,13 +17,10 @@
 *.jpeg
 *.gif
 *.webp
-*.o
-*.bin
-project/
-out/
-target/
-/test/
+!image/README/*.*
 
-
-
-
+node_modules
+dist
+output
+target
+build
