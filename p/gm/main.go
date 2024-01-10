@@ -1,8 +1,18 @@
 package main
 
-import "github.com/KM911/demo/format"
+import (
+	"os"
+	"time"
+
+	"github.com/KM911/demo/system"
+)
 
 func main() {
-	//format.BoxInfo("hello", " your should note")
-	format.BlockMessage("hello", []string{"hello", "world"})
+	// 测试cilp
+	// content := "hello world"
+	time.Sleep(5 * time.Second)
+	system.ExecuteCommand("echo " + os.Args[1] + " | clip")
+	// time.Sleep(5 * time.Second)
+	// println(filepath.Dir(util.TempDirectory))
+
 }

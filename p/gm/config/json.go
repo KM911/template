@@ -2,8 +2,10 @@ package config
 
 import (
 	"encoding/json"
-	"github.com/KM911/demo/format"
 	"os"
+	"path/filepath"
+
+	"github.com/KM911/demo/format"
 
 	"github.com/KM911/demo/util"
 )
@@ -13,7 +15,7 @@ const (
 )
 
 type JsonConfiguration struct {
-	Name         string
+	Source       string
 	Target       string
 	BuildCommand string
 	BuildOutput  string
@@ -29,7 +31,7 @@ type ExecuteBox struct {
 
 var (
 	DefaultJsonConfiguration = JsonConfiguration{
-		Name:         "sapkin",
+		Source:       util.WorkingDirectory,
 		Target:       TargetPath(),
 		BuildCommand: "go build -o sapkin",
 		BuildOutput:  "sapkin",
@@ -48,12 +50,11 @@ var (
 			},
 		},
 	}
-
 	UserJsonConfiguration = JsonConfiguration{}
 )
 
 func TargetPath() string {
-	return "T:\\sapkin"
+	return filepath.Join(filepath.Dir(util.TempDirectory), "paper")
 }
 
 func CreateDefaultJson() {

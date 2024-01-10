@@ -1,0 +1,23 @@
+{
+  "Source": "D:\\GITHUB\\KM911\\template\\p\\cli",
+  "Target": "T:\\paper",
+  "BuildCommand": "make build",
+  "BuildOutput": "paper.exe",
+  "ExecuteBoxs": [
+    {
+      "Args": [],
+      "Env": [],
+      "Dir": "",
+      "ExitCode": 123
+    },
+    {
+      "Args": [
+        "-f",
+        "config.toml"
+      ],
+      "Env": [],
+      "Dir": "",
+      "ExitCode": 309
+    }
+  ]
+}

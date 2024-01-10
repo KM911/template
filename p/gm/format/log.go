@@ -13,75 +13,75 @@ import (
 
 var ()
 
-func FileLogger(src string) {
-	logFile, err := os.OpenFile(src, os.O_RDWR|os.O_CREATE|os.O_APPEND, 0766)
+func FileLogger(_src string) {
+	logFile, err := os.OpenFile(_src, os.O_RDWR|os.O_CREATE|os.O_APPEND, 0766)
 	if err != nil {
 		panic(err)
 	}
 	log.SetOutput(logFile)
 }
-func Error(msg string) {
-	ErrorMessage("Error", msg)
+func Error(_msg string) {
+	ErrorMessage("Error", _msg)
 }
-func LogErorr(msg string) {
-	log.Println(color.BgRed.Render("[Error]"), ": ", color.Error.Render(msg))
-}
-
-func ErrorMessage(error string, msg string) {
-	fmt.Println(color.BgRed.Render(error), ": ", color.Error.Render(msg))
+func LogErorr(_msg string) {
+	log.Println(color.BgRed.Render("[Error]"), ": ", color.Error.Render(_msg))
 }
 
-func Warning(msg string) {
-	WarningMessage("Warning", msg)
-}
-func LogWarning(msg string) {
-	log.Println(color.BgYellow.Render("[Warning]"), ": ", color.Warn.Render(msg))
+func ErrorMessage(error string, _msg string) {
+	fmt.Println(color.BgRed.Render(error), ": ", color.Error.Render(_msg))
 }
 
-func WarningMessage(warning string, msg string) {
-	fmt.Println(color.BgYellow.Render(warning), ": ", color.Warn.Render(msg))
+func Warning(_msg string) {
+	WarningMessage("Warning", _msg)
+}
+func LogWarning(_msg string) {
+	log.Println(color.BgYellow.Render("[Warning]"), ": ", color.Warn.Render(_msg))
 }
 
-func Info(msg string) {
-	InfoMessage("Info", msg)
+func WarningMessage(warning string, _msg string) {
+	fmt.Println(color.BgYellow.Render(warning), ": ", color.Warn.Render(_msg))
 }
 
-func LogInfo(msg string) {
-	log.Println(color.BgBlue.Render("[Info]"), ": ", color.Info.Render(msg))
+func Info(_msg string) {
+	InfoMessage("Info", _msg)
 }
 
-func InfoMessage(info string, msg string) {
-	fmt.Println(color.BgBlue.Render(info), ": ", color.Info.Render(msg))
+func LogInfo(_msg string) {
+	log.Println(color.BgBlue.Render("[Info]"), ": ", color.Info.Render(_msg))
 }
 
-func Note(msg string) {
-	NoteMessage("Note", msg)
-}
-func LogNote(msg string) {
-	log.Println(color.BgHiBlue.Render("[Note]"), ": ", color.Note.Render(msg))
+func InfoMessage(info string, _msg string) {
+	fmt.Println(color.BgBlue.Render(info), ": ", color.Info.Render(_msg))
 }
 
-func NoteMessage(note string, msg string) {
-	fmt.Println(color.BgHiBlue.Render(note), ": ", color.Note.Render(msg))
+func Note(_msg string) {
+	NoteMessage("Note", _msg)
+}
+func LogNote(_msg string) {
+	log.Println(color.BgHiBlue.Render("[Note]"), ": ", color.Note.Render(_msg))
 }
 
-func Success(msg string) {
-	SuccessMessage("Success", msg)
+func NoteMessage(_note string, _msg string) {
+	fmt.Println(color.BgHiBlue.Render(_note), ": ", color.Note.Render(_msg))
 }
 
-func LogSuccess(msg string) {
-	log.Println(color.BgGreen.Render("[Success]"), ": ", color.Success.Render(msg))
+func Success(_msg string) {
+	SuccessMessage("Success", _msg)
 }
 
-func SuccessMessage(success string, msg string) {
-	fmt.Println(color.BgGreen.Render(success), ": ", color.Success.Render(msg))
+func LogSuccess(_msg string) {
+	log.Println(color.BgGreen.Render("[Success]"), ": ", color.Success.Render(_msg))
+}
+
+func SuccessMessage(success string, _msg string) {
+	fmt.Println(color.BgGreen.Render(success), ": ", color.Success.Render(_msg))
 }
 
 func LogExample() {
 	LogErorr("error")
 	LogWarning("warning")
 	LogInfo("info")
-	LogNote("note")
+	LogNote("_note")
 	LogSuccess("success")
 }
 
@@ -89,6 +89,6 @@ func Example() {
 	Error("error")
 	Warning("warning")
 	Info("info")
-	Note("note")
+	Note("_note")
 	Success("success")
 }

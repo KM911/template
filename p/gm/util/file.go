@@ -2,29 +2,29 @@ package util
 
 import "os"
 
-func ReadAll(src string) string {
-	data, err := os.ReadFile(src)
+func ReadAll(_src string) string {
+	_data, err := os.ReadFile(_src)
 	if err != nil {
 		panic(err)
 	}
-	return string(data)
+	return string(_data)
 }
 
-func CreatFile(src string, data string) {
-	err := os.WriteFile(src, []byte(data), 0666)
-	if err != nil {
-		panic(err)
-	}
-}
-
-func DeleteFile(src string) {
-	err := os.Remove(src)
+func CreatFile(_src string, _data string) {
+	err := os.WriteFile(_src, []byte(_data), 0666)
 	if err != nil {
 		panic(err)
 	}
 }
 
-func CopyFile(src string, dst string) {
-	data := ReadAll(src)
-	CreatFile(dst, data)
+func DeleteFile(_src string) {
+	err := os.Remove(_src)
+	if err != nil {
+		panic(err)
+	}
+}
+
+func CopyFile(_src string, dst string) {
+	_data := ReadAll(_src)
+	CreatFile(dst, _data)
 }

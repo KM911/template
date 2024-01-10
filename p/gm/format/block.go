@@ -2,14 +2,13 @@ package format
 
 import (
 	"fmt"
-	"github.com/KM911/demo/util"
 	"strings"
 
 	"github.com/gookit/color"
 )
 
 // ╭───────╮
-// │ msg   │
+// │ _msg   │
 // ├───────┤
 // │ str   │
 // │ str   │
@@ -38,9 +37,19 @@ var (
 	FormatStringBuilder = strings.Builder{}
 )
 
+func MaxLength(s []string) int {
+	currentMax := 0
+	for _, v := range s {
+		if len(v) > currentMax {
+			currentMax = len(v)
+		}
+	}
+	return currentMax
+}
+
 func BlockMessage(title string, content []string) {
 	//	1: find max length of content
-	maxLength := util.MaxLength(content) + 2
+	maxLength := MaxLength(content) + 2
 
 	DrawBlockLine(maxLength, TopLeft, HLine, TopRight)
 	//	绘制标题
@@ -76,8 +85,4 @@ func ContentLeftAlign(ctx string, length int) string {
 
 func ColorTextLength(ctx string) int {
 	return len(ctx) - 11
-}
-
-func CheckDataVaild(title []string, content [][]string) bool {
-	return true
 }

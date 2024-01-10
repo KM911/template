@@ -23,8 +23,8 @@ func IsDir(file_ string) bool {
 	return fileInfo.IsDir()
 }
 
-func ReadDir(src string) ([]string, []string) {
-	files, err := os.ReadDir(src)
+func ReadDir(_src string) ([]string, []string) {
+	files, err := os.ReadDir(_src)
 	if err != nil {
 		panic(err)
 	}

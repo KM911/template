@@ -3,24 +3,24 @@ package system
 import "runtime"
 
 var (
-	KillByname func(name string)
-	KillByPid  func(pid string)
+	KillByname func(_name string)
+	KillByPid  func(_pid string)
 )
 
-func killByname(name string) {
-	ExecuteCommand("killall " + name)
+func killByname(_name string) {
+	ExecuteCommand("killall " + _name)
 }
 
-func taskKillByName(name string) {
-	ExecuteCommand("taskkill /F /IM " + name)
+func taskKillByName(_name string) {
+	ExecuteCommand("taskkill /F /IM " + _name)
 }
 
-func killByPid(pid string) {
-	ExecuteCommand("kill -9 " + pid)
+func killByPid(_pid string) {
+	ExecuteCommand("kill -9 " + _pid)
 }
 
-func taskKillByPid(pid string) {
-	ExecuteCommand("taskkill /F /PID " + pid)
+func taskKillByPid(_pid string) {
+	ExecuteCommand("taskkill /F /PID " + _pid)
 }
 
 func init() {

@@ -18,8 +18,8 @@ var (
 // a.txt -> /home/xxx/a.txt
 // Makefile -> D:/SOFT/CODE/Makefile
 */
-func AbsPath(file_ string) string {
-	abs, _ := filepath.Abs(file_)
+func AbsPath(_file string) string {
+	abs, _ := filepath.Abs(_file)
 	return abs
 }
 
@@ -45,11 +45,11 @@ func executorDirectory() string {
 cover windows path to wsl path
 D:\soft\code --> /mnt/d/soft/code
 */
-func WslPathConvent(path string) string {
+func WslPathConvent(_wslPath string) string {
 	StringBuilder.Reset()
 	StringBuilder.WriteString("/mnt/")
-	StringBuilder.WriteString(strings.ToLower(string(path[0])))
-	StringBuilder.WriteString(path[3:])
+	StringBuilder.WriteString(strings.ToLower(string(_wslPath[0])))
+	StringBuilder.WriteString(_wslPath[3:])
 	res := StringBuilder.String()
 	StringBuilder.Reset()
 	return res

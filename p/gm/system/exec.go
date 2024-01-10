@@ -7,7 +7,7 @@ import (
 )
 
 var (
-	CreateCommand func(command string) *exec.Cmd
+	CreateCommand func(_command string) *exec.Cmd
 )
 
 func init() {
@@ -24,36 +24,39 @@ func redriectStd(cmd *exec.Cmd) {
 	cmd.Stderr = os.Stderr
 }
 
-func createCmd(command string) *exec.Cmd {
-	return exec.Command("cmd", "/C", command)
+func createCmd(_command string) (cmd *exec.Cmd) {
+
+	cmd = exec.Command("cmd", "/C", _command)
+
+	return
 }
 
-func createBash(command string) *exec.Cmd {
-	return exec.Command("bash", "-c", command)
+func createBash(_command string) *exec.Cmd {
+	return exec.Command("bash", "-c", _command)
 }
 
-func ExecuteCommand(command string) int {
-	cmdExecutor := CreateCommand(command)
+func ExecuteCommand(_command string) int {
+	cmdExecutor := CreateCommand(_command)
 	redriectStd(cmdExecutor)
 	cmdExecutor.Run()
 	return cmdExecutor.ProcessState.ExitCode()
 }
 
-func ExecuteCommandSilent(command string) int {
-	cmdExecutor := CreateCommand(command)
+func ExecuteCommandSilent(_command string) int {
+	cmdExecutor := CreateCommand(_command)
 	cmdExecutor.Run()
 	return cmdExecutor.ProcessState.ExitCode()
 }
 
-func ExecuteCommandResult(command string) string {
-	cmdExecutor := CreateCommand(command)
+func ExecuteCommandResult(_command string) string {
+	cmdExecutor := CreateCommand(_command)
 	redriectStd(cmdExecutor)
 	output, _ := cmdExecutor.Output()
 	return string(output)
 }
 
-func ExecuteCommandSilentResult(command string) string {
-	cmdExecutor := CreateCommand(command)
+func ExecuteCommandSilentResult(_command string) string {
+	cmdExecutor := CreateCommand(_command)
 	output, _ := cmdExecutor.Output()
 	return string(output)
 }

@@ -1,0 +1,60 @@
+2023/11/04 20:45:49 open file error
+2023/11/04 20:45:49 goroutine 1 [running]:
+runtime/debug.Stack()
+	D:/PATH/GO/src/runtime/debug/stack.go:24 +0x65
+demo/util.Recover(0x27a6c8)
+	D:/GITHUB/KM911/template/project/go/util/error.go:34 +0xaa
+panic({0x25cbe0, 0xc000004168})
+	D:/PATH/GO/src/runtime/panic.go:838 +0x207
+demo/util.EmitError(...)
+	D:/GITHUB/KM911/template/project/go/util/error.go:24
+demo/internal.MainProcess()
+	D:/GITHUB/KM911/template/project/go/internal/main.go:11 +0xcd
+main.main()
+	D:/GITHUB/KM911/template/project/go/main.go:13 +0xd8
+
+2023/11/04 20:46:35 open file error
+2023/11/04 20:46:35 goroutine 1 [running]:
+runtime/debug.Stack()
+	D:/PATH/GO/src/runtime/debug/stack.go:24 +0x65
+demo/util.Recover(0x43a6c8)
+	D:/GITHUB/KM911/template/project/go/util/error.go:34 +0xaa
+panic({0x41cbe0, 0xc000004168})
+	D:/PATH/GO/src/runtime/panic.go:838 +0x207
+demo/util.EmitError(...)
+	D:/GITHUB/KM911/template/project/go/util/error.go:24
+demo/internal.MainProcess()
+	D:/GITHUB/KM911/template/project/go/internal/main.go:11 +0xcd
+main.main()
+	D:/GITHUB/KM911/template/project/go/main.go:13 +0xd8
+
+2023/11/04 20:46:43 open file error
+2023/11/04 20:46:43 goroutine 1 [running]:
+runtime/debug.Stack()
+	D:/PATH/GO/src/runtime/debug/stack.go:24 +0x65
+demo/util.Recover(0x67a6c8)
+	D:/GITHUB/KM911/template/project/go/util/error.go:34 +0xaa
+panic({0x65cbe0, 0xc000004168})
+	D:/PATH/GO/src/runtime/panic.go:838 +0x207
+demo/util.EmitError(...)
+	D:/GITHUB/KM911/template/project/go/util/error.go:24
+demo/internal.MainProcess()
+	D:/GITHUB/KM911/template/project/go/internal/main.go:11 +0xcd
+main.main()
+	D:/GITHUB/KM911/template/project/go/main.go:13 +0xd8
+
+2023/11/04 20:47:01 open file error
+2023/11/04 20:47:01 goroutine 1 [running]:
+runtime/debug.Stack()
+	D:/PATH/GO/src/runtime/debug/stack.go:24 +0x65
+demo/util.Recover(0xc7a6d0)
+	D:/GITHUB/KM911/template/project/go/util/error.go:34 +0xaa
+panic({0xc5cbe0, 0xc000096150})
+	D:/PATH/GO/src/runtime/panic.go:838 +0x207
+demo/util.EmitError(...)
+	D:/GITHUB/KM911/template/project/go/util/error.go:24
+demo/internal.MainProcess()
+	D:/GITHUB/KM911/template/project/go/internal/main.go:11 +0xcd
+main.main()
+	D:/GITHUB/KM911/template/project/go/main.go:13 +0xd8
+
